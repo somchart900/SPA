@@ -1,3 +1,61 @@
-<div>
-    <h1 class="text-center">Contact</h1>
-</div>
+        <div class="container my-5">
+            <div class="row">
+                <!-- ข้อมูลติดต่อ -->
+                <div class="col-md-6 mb-4">
+                    <h1>ติดต่อเรา</h1>
+                    <p class="lead">
+                        คุณสามารถติดต่อเราผ่านฟอร์มด้านข้าง หรือดูตำแหน่งบนแผนที่
+                    </p>
+                    <ul class="list-unstyled">
+                        <li><strong>อีเมล:</strong> info@myproject.com</li>
+                        <li><strong>โทร:</strong> +66 872556208</li>
+                        <li><strong>ที่อยู่:</strong>บ้านเลขที่ 33 หมุ่ 2 ถนนสีคิ้ว-ชัยภูมิ ต.วังโรงใหญ่ อ.สีคิ้ว จ.นครราชสีมา 30140</li>
+                    </ul>
+
+                    <!-- แผนที่ตัวอย่าง -->
+<!-- 1️⃣ แปลงจาก DMS → Decimal
+Latitude: 15°01'32.7"N
+Decimal = 15 + 1/60 + 32.7/3600
+1/60 = 0.0166667
+32.7/3600 ≈ 0.0090833
+รวม = 15 + 0.0166667 + 0.0090833 ≈ 15.02575
+Longitude: 101°39'54.4"E
+Decimal = 101 + 39/60 + 54.4/3600
+39/60 = 0.65
+54.4/3600 ≈ 0.015111
+รวม = 101 + 0.65 + 0.015111 ≈ 101.66511
+
+✅ สรุป:
+Latitude = 15.02575, Longitude = 101.66511 -->
+                    <div class="mt-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.1234567890!2d101.66511!3d15.02575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sบ้านของคุณ!5e0!3m2!1sth!2sth!4v1690000000000!5m2!1sth!2sth"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- ฟอร์มติดต่อ -->
+
+                <div class="col-md-6">
+                    <h2>ส่งข้อความหาเรา</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">ชื่อ</label>
+                            <input type="text" class="form-control" id="name" placeholder="ชื่อของคุณ">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">อีเมล</label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">ข้อความ</label>
+                            <textarea class="form-control" id="message" rows="5"
+                                placeholder="เขียนข้อความของคุณที่นี่"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+                    </form>
+                </div>
+            </div>
+        </div>

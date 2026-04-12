@@ -1,0 +1,58 @@
+<div class="container py-5">
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h3 class="text-center mb-4">สมัครสมาชิกใหม่</h3>
+                <!-- <form id="register-form" hx-post="/api/register"> -->
+                <form id="register-form">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">ชื่อผู้ใช้</label>
+                        <input type="text" class="form-control" id="username" name="username" autocomplete="username"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">อีเมล</label>
+                        <input type="email" class="form-control" id="email" name="email" autocomplete="email" required>
+                    </div>
+
+                    <!-- ช่องรหัสผ่าน -->
+                    <div class="mb-3">
+                        <label for="password" class="form-label">รหัสผ่าน</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="password" name="password"
+                                autocomplete="current-password" required>
+                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ช่องยืนยันรหัสผ่าน -->
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label">ยืนยันรหัสผ่าน</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="confirm-password" name="confirm_password"
+                                autocomplete="current-password" required>
+                            <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success"
+                            onclick="handleRegister(this)">สมัครสมาชิก</button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-3">
+                    <a href="/login">กลับไปหน้าเข้าสู่ระบบ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

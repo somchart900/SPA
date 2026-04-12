@@ -1,28 +1,26 @@
 <div class="container py-5">
-    <h1 class="display-4">Our Products</h1>
-    <p class="lead">รายการผลิตภัณฑ์และบริการของเรา</p>
-    <hr class="my-4">
-    
-    <div class="row">
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Product 1</h5>
-                    <p class="card-text">รายละเอียดสินค้าเบื้องต้น...</p>
-                    <button class="btn btn-outline-primary">ดูรายละเอียด</button>
-                </div>
-            </div>
-        </div>
-    </div>
+        <div x-data="productApp()" x-init="fetchProducts()" class="text-center">
 
-<p>คุณสามารถกลับไปที่หน้าหลักเพื่อเริ่มต้นใหม่ได้ครับ</p>
-    
-    <a class="btn btn-primary btn-lg" 
-       href="javascript:void(0)" 
-       role="button" 
-       onclick="window.app.router.navigate('home'); return false;">
-       กลับสู่หน้าแรก
-    </a>
+            <h1>Products</h1>
+
+            <!-- Loading -->
+            <p x-show="loading" class="loading">กำลังโหลด...</p>
+
+            <!-- Error -->
+            <p x-show="error" style="color:red;" x-text="error"></p>
+
+            <!-- Products -->
+            <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
+                <template x-for="item in products" :key="item.id">
+                    <div x-transition class="card" style="border:1px solid #ddd;padding:10px;border-radius:10px;">
+                        <img :src="item.image" alt="" style="width:100px;height:100px;object-fit:contain;">
+                        <h3 x-text="item.title"></h3>
+                        <p x-text="item.price + ' $'"></p>
+                    </div>
+                </template>
+            </div>
+
+        </div>
 
 </div>
 
