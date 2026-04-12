@@ -1,0 +1,48 @@
+<div class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h1 class="display-4 fw-bold">ยินดีต้อนรับสู่ SPA ของฉัน</h1>
+            <p class="lead text-muted">นี่คือตัวอย่างหน้าแรกที่สร้างด้วย Bootstrap และ Alpine.js อย่างง่ายแต่ทรงพลัง</p>
+            <div class="d-grid gap-2 d-sm-flex">
+                <button class="btn btn-primary btn-lg" type="button" @click="window.app.router.navigate('about')">
+                    ทำความรู้จักกันมากขึ้น
+                </button>
+                <button class="btn btn-outline-secondary btn-lg" type="button">
+                    เรียนรู้เพิ่มเติม
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6 text-center">
+            <!-- <img src="https://via.placeholder.com/400x300" class="img-fluid rounded-3 shadow" alt="Hero Image"> -->
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row mt-5 pt-5">
+        <h2 class="text-center mb-5">คุณสมบัติหลัก</h2>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h4 class="card-title">⚡ เร็ว</h4>
+                    <p class="card-text">Single Page Application ที่โหลดเร็วและตอบสนองรวดเร็ว</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h4 class="card-title">📱 ตอบสนอง</h4>
+                    <p class="card-text">ออกแบบให้เข้ากันได้กับทุกขนาดหน้าจอ</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h4 class="card-title">🎨 สวยงาม</h4>
+                    <p class="card-text">ออกแบบด้วย Bootstrap ที่ทันสมัยและมืออาชีพ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+/* /css/styles.css */
+
+/* บังคับให้เบราว์เซอร์แสดงแถบ Scrollbar ตลอดเวลา */
+/* เพื่อป้องกัน Layout ขยับเวลาสลับหน้าที่มีเนื้อหาสั้น/ยาวไม่เท่ากัน */
+html {
+    overflow-y: scroll;
+}
+
+/* แถม: เพื่อความสวยงามบนเบราว์เซอร์สมัยใหม่ */
+@supports (scrollbar-gutter: stable) {
+    html {
+        overflow-y: auto;
+        scrollbar-gutter: stable;
+    }
+}
