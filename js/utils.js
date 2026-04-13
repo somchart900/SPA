@@ -3,41 +3,34 @@ function test() {
 }
 
 
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest("#togglePassword");
+    if (btn) {
+        const input = document.getElementById("password");
+        const isPassword = input.type === "password";
 
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    //--ดึงปีปัจจุบัน
-    const yearSpan = document.getElementById("current-year");
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
+        input.type = isPassword ? "text" : "password";
+        btn.innerHTML = isPassword
+            ? '<i class="bi bi-eye-slash"></i>'
+            : '<i class="bi bi-eye"></i>';
     }
 
-    // เปิดูระหัสผ่านที่พิมพ์ลงไปแล้ว
-    if (document.getElementById("password")) {
-        const togglePassword = document.getElementById("togglePassword");
-        const passwordInput = document.getElementById("password");
+    const btn2 = e.target.closest("#toggleConfirmPassword");
+    if (btn2) {
+        const input = document.getElementById("confirm-password");
+        const isPassword = input.type === "password";
 
-
-        // toggle ช่องรหัสผ่าน
-        togglePassword.addEventListener("click", () => {
-            const type = passwordInput.type === "password" ? "text" : "password";
-            passwordInput.type = type;
-            togglePassword.innerHTML = type === "password" ? '<i class="bi bi-eye"></i>' : '<i class="bi bi-eye-slash"></i>';
-        });
-    }
-    if (document.getElementById("confirm-password")) {
-        const toggleConfirmPassword = document.getElementById("toggleConfirmPassword");
-        const confirmPasswordInput = document.getElementById("confirm-password");
-        //toggle ช่องยืนยันรหัสผ่าน
-        toggleConfirmPassword.addEventListener("click", () => {
-            const type = confirmPasswordInput.type === "password" ? "text" : "password";
-            confirmPasswordInput.type = type;
-            toggleConfirmPassword.innerHTML = type === "password" ? '<i class="bi bi-eye"></i>' : '<i class="bi bi-eye-slash"></i>';
-        });
+        input.type = isPassword ? "text" : "password";
+        btn2.innerHTML = isPassword
+            ? '<i class="bi bi-eye-slash"></i>'
+            : '<i class="bi bi-eye"></i>';
     }
 });
+
+
+
+
+
 
 
 

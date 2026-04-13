@@ -1,0 +1,76 @@
+<div class="container my-5 x-data">
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Card โปรไฟล์ -->
+            <div class="card shadow-sm p-4">
+                <!-- ชื่อ -->
+                <h1 class="h4 mb-2" x-show="$store.auth.user">
+                    <span x-text="$store.auth.user?.name"></span>
+                </h1>
+
+                <!-- อีเมล -->
+                <p class="mb-1 text-muted" x-show="$store.auth.user">
+                    📧 <span x-text="$store.auth.user?.email"></span>
+                </p>
+
+                <!-- วันที่สมัคร -->
+                <p class="mb-3 text-muted" x-show="$store.auth.user">
+                    🗓️ สมัครเมื่อ: <span x-text="$store.auth.user?.dateadd"></span>
+                </p>
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs" id="profileTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="login-tab" data-bs-toggle="tab"
+                            data-bs-target="#loginHistory" type="button" role="tab">
+                            ประวัติการล็อกอิน
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="topup-tab" data-bs-toggle="tab" data-bs-target="#topupHistory"
+                            type="button" role="tab">
+                            ประวัติการเติมเงิน
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="order-tab" data-bs-toggle="tab" data-bs-target="#orderHistory"
+                            type="button" role="tab">
+                            ประวัติการสั่งซื้อ
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content mt-3">
+                    <!-- ประวัติการล็อกอิน -->
+                    <div class="tab-pane fade show active" id="loginHistory" role="tabpanel">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">12/04/2026 - 12:30 น. จาก IP 192.168.1.10</li>
+                            <li class="list-group-item">11/04/2026 - 20:15 น. จาก IP 192.168.1.11</li>
+                            <li class="list-group-item">10/04/2026 - 09:00 น. จาก IP 192.168.1.12</li>
+                        </ul>
+                    </div>
+
+                    <!-- ประวัติการเติมเงิน -->
+                    <div class="tab-pane fade" id="topupHistory" role="tabpanel">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">11/04/2026 - เติมเงิน 500 บาท ผ่าน TrueMoney</li>
+                            <li class="list-group-item">05/04/2026 - เติมเงิน 300 บาท ผ่าน PromptPay</li>
+                            <li class="list-group-item">28/03/2026 - เติมเงิน 1000 บาท ผ่าน บัตรเครดิต</li>
+                        </ul>
+                    </div>
+
+                    <!-- ประวัติการสั่งซื้อ -->
+                    <div class="tab-pane fade" id="orderHistory" role="tabpanel">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">11/04/2026 - vpn 100 บาท 90 วัน</li>
+                            <li class="list-group-item">05/04/2026 - vpn 10 บาท 2 วัน</li>
+                            <li class="list-group-item">28/03/2026 - vpn 50 บาท 15 วัน</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
